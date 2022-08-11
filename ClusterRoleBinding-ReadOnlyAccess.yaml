@@ -1,0 +1,12 @@
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: aks-cluster-readonly-rolebinding
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: aks-cluster-readonly-role
+subjects:
+- kind: Group
+  #name: groupObjectId # Your Azure AD Group Object ID: aksreadonly
+  name: "99892c36-7394-4817-bd01-0d34edcba05a"  
